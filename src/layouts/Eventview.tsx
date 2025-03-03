@@ -17,7 +17,7 @@ const Eventview = () => {
             });
         }
         getCard();
-    }, [id])
+    }, [])
     return (
         <div className="flex flex-col px-8 gap-8 md:px-16 lg:px-32">
             <Cardpre {...data} />

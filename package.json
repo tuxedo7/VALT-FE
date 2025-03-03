@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -19,7 +18,7 @@
     "encoding": "^0.1.13",
     "ethers": "^6.13.2",
     "mysql2": "^3.11.0",
-    "next": "^13.5.8",
+    "next": "14.2.6",
     "pino-pretty": "^11.3.0",
     "react": "^18",
     "react-dom": "^18",

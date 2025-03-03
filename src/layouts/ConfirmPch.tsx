@@ -3,7 +3,6 @@ import { useRouter, useParams } from 'next/navigation';
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from 'react'
-import Image from 'next/image'
 
 const ConfirmInv = ({ gen_invnum }: any) => {
     const router = useRouter();
@@ -31,7 +30,7 @@ const ConfirmInv = ({ gen_invnum }: any) => {
             })
         }
         getCard();
-    }, [id])
+    }, [])
     return (
         <div className="flex w-full py-6">
             <div className="flex w-full py-5 lg:px-40">
@@ -67,7 +66,7 @@ const ConfirmInv = ({ gen_invnum }: any) => {
                         </div>
                     </div>
                     <div className="flex flex-col justify-center items-center py-7">
-                        <Image src='/assets/img/qr-code 1.png' alt="qr-code" className='w-[180px] h-[180px] block'/>
+                        <img src='/assets/img/qr-code 1.png' className='w-[180px] h-[180px] block'></img>
                         <p className="text-[16px] leading-[24px] w-64 text-center font-Poppins text-whiteTextColor py-4">Find the entrance with logo $VALT and show this OR code to staff</p>
                     </div>
                     <div className="flex flex-col justify-center items-center">

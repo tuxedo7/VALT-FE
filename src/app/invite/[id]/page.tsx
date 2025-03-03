@@ -20,7 +20,7 @@ const Invite = () => {
                 console.log(error);
             })
         }
-    }, [id])
+    }, [])
 
     useEffect(() => {
         const unlisten = (() => {

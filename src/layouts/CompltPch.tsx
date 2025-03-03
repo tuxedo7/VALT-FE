@@ -15,7 +15,7 @@ const CompltPch = () => {
             })
         }
         getCard();
-    }, [id])
+    }, [])
     return (
         <div className="flex w-full py-6">
             <div className="flex w-full py-5 lg:px-40">

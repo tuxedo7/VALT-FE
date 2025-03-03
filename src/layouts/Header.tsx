@@ -1,6 +1,5 @@
 
 import { useRouter } from 'next/navigation';
-import Image from 'next/image'
 
 const Header = () => {
     const router = useRouter();
@@ -11,18 +10,18 @@ const Header = () => {
     return (
         <>
             <div className="relative justify-center text-white w-full lg:py-[20px] lg:px-[80px] sm:py-[24px] sm:px-8 md:py-[24px] md:px-8 flex flex-row gap-9 items-center border-grayBackgroundColor border-x-0 border-y-2">
-                <button onClick={handleClick}><Image src="/assets/img/Logo.png" className="w-28 sm:w-20" alt="Logo"/></button>
+                <button onClick={handleClick}><img src="/assets/img/Logo.png" className="w-28 sm:w-20" alt="Logo"></img></button>
                 <div className="border border-grayBackgroundColor h-[50px] sm:hidden"></div>
                 <div className="flex flex-wrap-reverse justify-between w-full items-center gap-x-0 gap-y-3">
                     <div className="flex flex-row items-center sm:hidden md:order-1">
-                        <Image src="/assets/img/valt.png" className="w-10 h-10" alt="VALT"/>
+                        <img src="/assets/img/valt.png" className="w-10 h-10" alt="VALT"></img>
                         <p className="ml-[10px] text-3 font-bold text-greyfont">$VALT</p>
                         <p className="pl-6 text-[20px] md:text-[14px] font-semibold">
                             1
                         </p>
                     </div>
                     <div className="flex flex-row items-center sm:hidden">
-                        <Image src="/assets/img/USDT.png" className="w-10 h-10" alt="USDT"/>
+                        <img src="/assets/img/USDT.png" className="w-10 h-10" alt="USDT"></img>
                         <p className="ml-[10px] text-3 font-bold text-greyfont">$USDT</p>
                         <p className="pl-6  text-[18px] md:text-3 font-semibold">
                             1
@@ -30,7 +29,7 @@ const Header = () => {
                     </div>
 
                     <div className="flex flex-row items-center sm:hidden">
-                        <Image src="/assets/img/BTC.png" className="w-10 h-10" alt="BTC"/>
+                        <img src="/assets/img/BTC.png" className="w-10 h-10" alt="BTC"></img>
                         <p className="ml-[10px] text-3 font-bold text-greyfont">$BtC</p>
                         <p className="pl-6  text-[18px] md:text-3 font-semibold">
                             N/A
@@ -38,7 +37,7 @@ const Header = () => {
                     </div>
 
                     <div className="flex flex-row items-center sm:hidden">
-                        <Image src="/assets/img/Eth.png" className="w-10 h-10" alt="ETH"/>
+                        <img src="/assets/img/Eth.png" className="w-10 h-10" alt="ETH"></img>
                         <p className="ml-[10px] text-3 font-bold text-greyfont">$ETH</p>
                         <p className="pl-6  text-[18px] md:text-3 font-semibold">
                             N/A

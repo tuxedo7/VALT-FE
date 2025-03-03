@@ -7,7 +7,6 @@ import MainCpn from "../../../Elements/MainCpn";
 import TextSection from "../../../Elements/TextSection";
 import Eventview from "../../../layouts/Eventview";
 import { useEffect } from "react";
-
 export default function Detail() {
     useEffect(() => {
         const unlisten = (() => {

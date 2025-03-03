@@ -1,5 +1,4 @@
 import { useAccount, useDisconnect, useEnsAvatar, useEnsName } from 'wagmi'
-import Image from 'next/image'
 
 export function Account() {
   const { address } = useAccount()
@@ -9,7 +8,7 @@ export function Account() {
 
   return (
     <div>
-      {ensAvatar && <Image alt="ENS Avatar" src={ensAvatar} />}
+      {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
       {address && <div>{ensName ? `${ensName} (${address})` : address}</div>}
       <button onClick={() => disconnect()}>Disconnect</button>
     </div>

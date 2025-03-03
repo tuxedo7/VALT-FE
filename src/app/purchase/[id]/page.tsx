@@ -26,7 +26,7 @@ const Purchase = () => {
             })
         }
         getCard();
-    }, [id])
+    }, [])
     return (
         <div>
             <Header />

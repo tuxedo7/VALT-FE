@@ -3,7 +3,6 @@ import { useParams } from 'next/navigation';
 import { VALT_Token_Address } from "../utils";
 import { useAccount, useBalance, useWriteContract } from 'wagmi';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image'
 
 const MainCpn = ({ gen_invvalt, vip_invvalt, vipb_invvalt }: any) => {
     const router = useRouter();
@@ -80,7 +79,7 @@ const MainCpn = ({ gen_invvalt, vip_invvalt, vipb_invvalt }: any) => {
     return (
         <div className="w-full flex flex-col items-center sm:p-10 md:p-10 lg:py-10 lg:px-[152px] gap-8 rounded-2xl bg-darkGrayColor">
             <div className="w-full flex flex-col items-center justify-center rounded-3xl bg-darkgrayBackgroundColor sm:hidden md:hidden   p-6 gap-3">
-                <Image src="/assets/img/wallet_icon.png" className="w-[56px] h-[56px]" alt="wallet_icon" />
+                <img src="/assets/img/wallet_icon.png" className="w-[56px] h-[56px]" alt="wallet_icon" />
                 <div className="text-2xl leading-[50px] font-semibold text-whiteTextColor">My wallet:</div>
                 <div className="text-[42px] leading-[50px] font-semibold text-greenColor">{valtBalance}</div>
             </div>
@@ -88,7 +87,7 @@ const MainCpn = ({ gen_invvalt, vip_invvalt, vipb_invvalt }: any) => {
                 <div className="py-2 md:px-44 sm:px-2 flex flex-row justify-between items-center gap-6 sm:flex-col lg:flex-row  md:flex-col md:w-full w-full overflow-x-hidde sm:min-w-[200px] ">
                     <button className={`relative w-[256px] md:w-full md:min-w-[256px] sm:w-full gap-3 h-[462px] bg-darkgrayBackgroundColor rounded-3xl flex items-center  flex-col p-6
                     hover:bg-[#252b3b] active:bg-[#232e3b] focus:outline-none ring-greenColor ${selectedTicket === 1 && 'ring'} `} onClick={() => { setTicketValue(vipb_invvalt); setSelectedTicket(1); }}>
-                        <Image src="/assets/img/general_entrance.png" alt='general_entrance' className="w-[48px] h-[48px]"/>
+                        <img src="/assets/img/general_entrance.png" className="w-[48px] h-[48px]"></img>
                         <p className="text-[24px] leading-[30px] font-semibold text-whiteTextColor">General</p>
                         <p className="text-[24px] leading-[30px] font-semibold text-whiteTextColor">entrance</p>
                         <p className="text-[14px] leading-[20px] font-normal text-whiteTextColor pt-2">Included</p>
@@ -101,7 +100,7 @@ const MainCpn = ({ gen_invvalt, vip_invvalt, vipb_invvalt }: any) => {
 
                     <button className={`relative w-[256px] md:w-full md:min-w-[256px] sm:w-full gap-3 h-[462px] bg-darkgrayBackgroundColor rounded-3xl flex items-center  flex-col p-6
                     hover:bg-[#252b3b] active:bg-[#232e3b] focus:outline-none ring-greenColor ${selectedTicket === 2 && 'ring'} `} onClick={() => { setTicketValue(vipb_invvalt); setSelectedTicket(2); }}>
-                        <Image src="/assets/img/vip_icon.png" alt="vip_icon" className="w-[48px] h-[48px]"/>
+                        <img src="/assets/img/vip_icon.png" className="w-[48px] h-[48px]"></img>
                         <p className="text-[24px] leading-[30px] font-semibold text-whiteTextColor">VIP entrance</p>
                         <p className="text-[14px] leading-[20px] font-normal text-whiteTextColor pt-2">VIP entrance</p>
                         <p className="text-[14px] leading-[20px] font-normal text-whiteTextColor pt-2">Included</p>
@@ -114,7 +113,7 @@ const MainCpn = ({ gen_invvalt, vip_invvalt, vipb_invvalt }: any) => {
 
                     <button className={`relative w-[256px] md:w-full md:min-w-[256px] sm:w-full gap-3 h-[462px] bg-darkgrayBackgroundColor rounded-3xl flex items-center  flex-col p-6
                     hover:bg-[#252b3b] active:bg-[#232e3b] focus:outline-none ring-greenColor ${selectedTicket === 3 && 'ring'} `} onClick={() => { setTicketValue(vipb_invvalt); setSelectedTicket(3); }}>
-                        <Image src="/assets/img/vip_icon2.png" alt="vip_icon2" className="w-[48px] h-[48px]"/>
+                        <img src="/assets/img/vip_icon2.png" className="w-[48px] h-[48px]"></img>
                         <p className="text-[24px] leading-[30px] font-semibold text-whiteTextColor">VIP entrance</p>
                         <p className="text-[24px] leading-[30px] font-semibold text-whiteTextColor">(BULL)</p>
                         <p className="text-[14px] leading-[20px] font-normal text-whiteTextColor pt-2">Included</p>
@@ -132,10 +131,10 @@ const MainCpn = ({ gen_invvalt, vip_invvalt, vipb_invvalt }: any) => {
             </div>
             <p className="text-3xl font-medium text-whiteTextColor sm:hidden md:block lg:hidden">Total $VALT</p>
             <div className="w-full flex flex-row justify-center items-center gap-[18px] md:mt-[-36px]">
-                <button className='rounded-full focus:outline-none focus:ring focus:ring-greenColor' onClick={() => handleMinus()}><Image src="/assets/img/minus_icon.png" className="w-[62px] min-w-[32px] " alt='minus_icon'/></button>
-                <Image src="/assets/img/wallet_icon.png" alt="wallet_icon" className="w-[62px] h-[62px]"/>
+                <button className='rounded-full focus:outline-none focus:ring focus:ring-greenColor' onClick={() => handleMinus()}><img src="/assets/img/minus_icon.png" className="w-[62px] min-w-[32px] "></img></button>
+                <img src="/assets/img/wallet_icon.png" className="w-[62px] h-[62px]"></img>
                 <p className="md:text-[96px] sm:text-[56px] font-bold text-greenColor">{needValt}</p>
-                <button className='rounded-full focus:outline-none focus:ring focus:ring-greenColor' onClick={() => handlePlus()}><Image src="/assets/img/plus_icon.png" className="w-[62px] min-w-[32px]" alt='plus_icon'/></button>
+                <button className='rounded-full focus:outline-none focus:ring focus:ring-greenColor' onClick={() => handlePlus()}><img src="/assets/img/plus_icon.png" className="w-[62px] min-w-[32px]"></img></button>
             </div >
             <button className="w-[184px] py-[16px] px-[24px] rounded-[90px] bg-greenColor flex justify-center items-center text-[16px] font-bold color-dark hover:bg-[#8ed6a9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c6e6d2]" onClick={handleClick}>
                 {

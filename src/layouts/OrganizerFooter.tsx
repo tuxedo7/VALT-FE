@@ -2,8 +2,6 @@ import { useRouter } from 'next/navigation';
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6"
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import Image from 'next/image'
-
 const OrganizerFooter = () => {
     const router = useRouter();
 
@@ -21,7 +19,7 @@ const OrganizerFooter = () => {
             <div className="w-full border border-grayColor border-x-[0px]  text-gray-500 ">
                 <div className="w-full md:py-[39px] lg:py-[39px] sm:py-[18px] px-[16px] md:px-[39px] lg:px-[160px] flex md:flex-row  sm:flex-col sm:items-center sm:gap-y-[21px] justify-between ">
                     <div className="flex flex-row sm:flex-col sm:items-center lg:items-center md:items-center  sm:gap-y-[21px] ">
-                        <button onClick={handlechangehome}><Image src="/assets/img/Logo.png" className="w-[60px] h-[60px]" alt="logo"/></button>
+                        <button onClick={handlechangehome}><img src="/assets/img/Logo.png" className="w-[60px] h-[60px]" alt="logo"></img></button>
                         <div className="flex flex-row gap-[24px] pl-[64px] sm:pl-0  sm:justify-between ">
                             <a href="https://docs.google.com/document/d/1Ju1jzMTOQz5TyXL0XiABg2DX7lxupinukfKCapHXIes/edit?usp=sharing" className="flex" >
                                 <p className="text-[18px] font-bold text-grayColor">FAQ</p>

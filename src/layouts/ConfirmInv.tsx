@@ -4,7 +4,6 @@ import { useParams } from "next/navigation";
 import {
     useWriteContract,
 } from "wagmi";
-import Image from 'next/image'
 
 import BINANCE_PRESALE_CONTRACT_ABI from "../utils/binanceABI.json";
 import BINANCE_USDT_CONTRACT_ABI from "../utils/bep20.json";
@@ -62,7 +61,7 @@ const ConfirmInv = ({ vipb_invnum, gen_invnum, vip_invnum }: any) => {
                 <div className="flex flex-col w-full justify-center items-center py-4">
                     <p className="text-[36px] leading-6 sm:text-2xl font-Poppins text-white">You purchase</p>
                     <div className="w-full  flex flex-row justify-center items-center gap-[18px]">
-                        <Image src="/assets/img/wallet_icon.png" alt="wallet_icon" className="w-[62px] h-[62px] block"/>
+                        <img src="/assets/img/wallet_icon.png" className="w-[62px] h-[62px] block"></img>
                         <p className="flex text-5xl font-bold text-greenColor">3 000</p>
                     </div>
                 </div>
