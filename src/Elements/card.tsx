@@ -1,5 +1,6 @@
 import { useRouter } from 'next/navigation';
 import dateFormat from 'dateformat';
+import Image from 'next/image'
 
 export default function Card({ _id, eventname, country, city, www, date, offerdate, type, On_offline, gen_invvalt }: any) {
 
@@ -14,7 +15,7 @@ export default function Card({ _id, eventname, country, city, www, date, offerda
                 <div className="w-full sm:px-[16px] flex md:flex-col sm:flex-col p-6 gap-x-8 sm:gap-y-8 rounded-3xl bg-darkgrayBackgroundColor justify-between 
                 hover:bg-[#252b3b] active:bg-[#232e3b] ">
                     <div className="flex md:flex-row sm:flex-col gap-x-8 sm:gap-y-8">
-                        <img src='/assets/img/logo2.png' className='w-[168px] h-[168px]'></img>
+                        <Image src='/assets/img/logo2.png' className='w-[168px] h-[168px]' alt='logo2'></Image>
                         <div className="flex flex-col gap-y-3 justify-start items-start">
                             <div className="flex flex-wrap gap-4">
                                 <div className="px-2 rounded bg-pinkColor font-bold text-lg text-white min-w-[88px]">
@@ -30,7 +31,7 @@ export default function Card({ _id, eventname, country, city, www, date, offerda
                     </div>
                     <button className="bg-grayBackgroundColor flex rounded-3xl lg:w-[370px] w-full flex-col pt-[42px] md:mt-8 hover:bg-darkgrayBackgroundColor active:bg-[#252b3b]" onClick={handleClick}>
                         <div className="w-full flex flex-row items-center justify-center rounded-3xl bg-transparent gap-1">
-                            <img src="/assets/img/wallet_icon.png" className="w-[56px] h-[56px]" alt="wallet_icon"></img>
+                            <Image src="/assets/img/wallet_icon.png" className="w-[56px] h-[56px]" alt="wallet_icon"></Image>
                             <div className="text-[38px] font-semibold text-greenColor">{gen_invvalt}</div>
                         </div>
                         <div className="w-full flex items-center justify-center py-6">

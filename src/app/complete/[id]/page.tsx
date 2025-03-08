@@ -1,26 +1,20 @@
-"use client"
-import BackHeader from "../../../layouts/BackHeader";
-import Footer from "../../../layouts/Footer";
-import Header from "../../../layouts/Header";
-import CompltPch from "../../../layouts/CompltPch";
-import { useEffect } from "react";
-const Complete = () => {
-    useEffect(() => {
-        const unlisten = (() => {
-            window.scrollTo(0, 0);
-        });
-        return () => {
-            unlisten();
-        };
-    }, []);
-    return (
-        <div>
-            <Header />
-            <BackHeader />
-            <CompltPch />
-            <Footer />
-        </div>
-    )
+import axios from "axios";
+
+export async function generateStaticParams() {
+    try {
+        const res = await axios.get("https://events.valt.pro/getallevent");
+        if (!res) throw new Error("Failed to fetch IDs");
+        return res.data.map((event: any) => ({ id: event._id}));
+    } catch(error) {
+        console.log("Error fetching IDs:", error);
+        return [];
+    }
 }
+
+import CompleteClient from "../../../components/client/complete"; // Import Client Component
+
+const Complete = () => {
+    return <CompleteClient />;
+};
 
 export default Complete;

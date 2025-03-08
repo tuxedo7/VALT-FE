@@ -1,39 +1,20 @@
-"use client"
-import Footer from "../../../layouts/Footer";
-import Header from "../../../layouts/Header";
-import ConfirmPch from "../../../layouts/ConfirmPch";
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import axios from "axios";
 
-const Purchase = () => {
-    const { id } = useParams();
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        const unlisten = (() => {
-            window.scrollTo(0, 0);
-        });
-        return () => {
-            unlisten();
-        };
-    }, []);
-    useEffect(() => {
-        async function getCard() {
-            axios.get(`https://valt-be.onrender.com/getevent/${id}`).then((res) => {
-                setData(res.data);
-            }).catch((error) => {
-                console.log(error);
-            })
-        }
-        getCard();
-    }, [])
-    return (
-        <div>
-            <Header />
-            <ConfirmPch {...data} />
-            <div className="mt-24"><Footer /></div>
-        </div>
-    )
+export async function generateStaticParams() {
+    try {
+        const res = await axios.get("https://events.valt.pro/getallevent");
+        if (!res) throw new Error("Failed to fetch IDs");
+        return res.data.map((event: any) => ({ id: event._id}));
+    } catch(error) {
+        console.log("Error fetching IDs:", error);
+        return [];
+    }
 }
+
+import PurchaseClient from "../../../components/client/purchase"; // Import Client Component
+
+const Purchase = () => {
+    return <PurchaseClient />;
+};
 
 export default Purchase;

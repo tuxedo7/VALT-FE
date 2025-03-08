@@ -8,14 +8,14 @@ const CompltPch = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
         async function getCard() {
-            const response = await axios.get(`https://valt-be.onrender.com/getevent/${id}`).then((res) => {
+            const response = await axios.get(`https://events.valt.pro/getevent/${id}`).then((res) => {
                 setData(res.data);
             }).catch((error) => {
                 console.log(error);
             })
         }
         getCard();
-    }, [])
+    }, [id])
     return (
         <div className="flex w-full py-6">
             <div className="flex w-full py-5 lg:px-40">

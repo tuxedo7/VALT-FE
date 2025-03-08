@@ -66,7 +66,7 @@ const Addorganizer: React.FC = () => {
         // }
 
         try {
-            const res = await axios.post("https://valt-be.onrender.com/addorganizer", newEvent);
+            const res = await axios.post("https://events.valt.pro/addorganizer", newEvent);
             console.log(res);
             alert("Post has been Added successfully");
             router.push("/Admin")

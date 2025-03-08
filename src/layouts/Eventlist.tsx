@@ -15,7 +15,7 @@ const Eventlist = () => {
 
     const [data, setData] = useState([]);
     async function getAllCard() {
-        axios.get("https://valt-be.onrender.com/getallevent").then((res) => {
+        axios.get("https://events.valt.pro/getallevent").then((res) => {
             setData(res.data);
         }).catch((error) => {
             console.log(error);

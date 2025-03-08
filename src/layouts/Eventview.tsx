@@ -10,14 +10,14 @@ const Eventview = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
         async function getCard() {
-            axios.get(`https://valt-be.onrender.com/getevent/${id}`).then((res) => {
+            axios.get(`https://events.valt.pro/getevent/${id}`).then((res) => {
                 setData(res.data);
             }).catch((error) => {
                 console.error(error);
             });
         }
         getCard();
-    }, [])
+    }, [id])
     return (
         <div className="flex flex-col px-8 gap-8 md:px-16 lg:px-32">
             <Cardpre {...data} />

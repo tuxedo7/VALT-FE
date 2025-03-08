@@ -1,7 +1,7 @@
 "use client";
 // app/layout.tsx
 import { Inter } from "next/font/google";
-import "./globals.css";
+import '@/styles/globals.css';
 import { config } from "@/config";
 import Web3ModalProvider from "@/context";
 import { cookieToInitialState } from "wagmi";

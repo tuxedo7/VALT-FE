@@ -1,6 +1,7 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
+import Image from "next/image";
 // import { Tooltip, Button } from "@material-tailwind/react";
 
 const AdminCard = ({ _id, eventname, country, city, www, date, offerdate, type, On_offline, gen_invvalt }: any) => {
@@ -22,8 +23,8 @@ const AdminCard = ({ _id, eventname, country, city, www, date, offerdate, type, 
                 <div className="w-full sm:px-[16px] flex sm:flex-col p-6 gap-x-8 sm:gap-y-8 rounded-3xl bg-darkgrayBackgroundColor justify-between
                 hover:bg-[#252b3b] active:bg-[#232e3b] ">
                     <div className="flex md:flex-row sm:flex-col gap-x-8 sm:gap-y-8">
-                        {/* <img src='/assets/img/section1_logo.png' className='w-[168px] h-[168px] hidden lg:block'></img> */}
-                        <img src='/assets/img/logo2.png' className='w-[168px] h-[168px] block'></img>
+                        {/* <Image src='/assets/img/section1_logo.png' className='w-[168px] h-[168px] hidden lg:block' alt="logo2"></Image> */}
+                        <Image src='/assets/img/logo2.png' className='w-[168px] h-[168px] block' alt="logo2"></Image>
                         <div className="flex flex-col gap-y-3 justify-start items-start">
                             <div className="flex flex-row gap-x-4 h-8">
                                 <div className="px-2 rounded bg-pinkColor font-bold text-lg text-white min-w-[88px]">

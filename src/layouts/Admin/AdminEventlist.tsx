@@ -8,7 +8,7 @@ const AdminEventlist = () => {
 
     const [data, setData] = useState([]);
     async function getAllCard() {
-        const response = await axios.get("https://valt-be.onrender.com/getallevent").then((res) => {
+        const response = await axios.get("https://events.valt.pro/getallevent").then((res) => {
             setData(res.data);
         }).catch((error) => {
             console.log(error);
